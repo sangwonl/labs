@@ -1,1 +1,4 @@
-# labs
+# run jupyter 
+```bash
+$ jupyter lab
+```
