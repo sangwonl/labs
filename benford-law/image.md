@@ -102,6 +102,15 @@ showimg(img)
 
 **3. 픽셀값의 첫번째 숫자 빈도를 구해보자**
 
+첫번째 숫자를 추출하는 예시
+```
+123 -> 1
+-456 -> 4
+0 -> ignore
+0.789 -> 7
+-0.00246 -> 2
+```
+
 
 ```python
 from decimal import Decimal
@@ -589,9 +598,11 @@ show_me_bendford2(
 
 ### 참고
 
-https://abhayk1201.github.io/files/EE604_tp.pdf
-https://users.cs.cf.ac.uk/Dave.Marshall/Multimedia/node231.html#:~:text=answer%3A%20They%20define%20DC%20and,can%20be%20precomputed%20and%20stored.
-https://inst.eecs.berkeley.edu/~ee123/sp16/Sections/JPEG_DCT_Demo.html
+[The Discrete Cosine Transform (DCT)](https://users.cs.cf.ac.uk/Dave.Marshall/Multimedia/node231.html#:~:text=answer%3A%20They%20define%20DC%20and,can%20be%20precomputed%20and%20stored.)
+
+[JPEG DCT Demo](https://inst.eecs.berkeley.edu/~ee123/sp16/Sections/JPEG_DCT_Demo.html)
+
+[Analysis of Benford's Law in Digital Image Forensics](https://abhayk1201.github.io/files/EE604_tp.pdf)
 
 
 ```python
