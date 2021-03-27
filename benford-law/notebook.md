@@ -60,7 +60,7 @@ showbfplot()
 
 
     
-![png](image_files/image_6_0.png)
+![png](notebook_files/notebook_6_0.png)
     
 
 
@@ -94,7 +94,7 @@ showimg(img)
 
 
     
-![png](image_files/image_12_0.png)
+![png](notebook_files/notebook_12_0.png)
     
 
 
@@ -179,7 +179,7 @@ showbfplot([
 
 
     
-![png](image_files/image_19_0.png)
+![png](notebook_files/notebook_19_0.png)
     
 
 
@@ -223,7 +223,7 @@ showimg(img_gray)
 
 
     
-![png](image_files/image_26_0.png)
+![png](notebook_files/notebook_26_0.png)
     
 
 
@@ -237,7 +237,7 @@ showbfplot([
 
 
     
-![png](image_files/image_27_0.png)
+![png](notebook_files/notebook_27_0.png)
     
 
 
@@ -251,7 +251,7 @@ showimg(img_yxx)
 
 
     
-![png](image_files/image_29_0.png)
+![png](notebook_files/notebook_29_0.png)
     
 
 
@@ -265,7 +265,7 @@ showbfplot([
 
 
     
-![png](image_files/image_30_0.png)
+![png](notebook_files/notebook_30_0.png)
     
 
 
@@ -320,13 +320,13 @@ showbfplot([
 
 
     
-![png](image_files/image_36_0.png)
+![png](notebook_files/notebook_36_0.png)
     
 
 
 
     
-![png](image_files/image_36_1.png)
+![png](notebook_files/notebook_36_1.png)
     
 
 
@@ -343,7 +343,7 @@ showbfplot([
 
 
     
-![png](image_files/image_38_0.png)
+![png](notebook_files/notebook_38_0.png)
     
 
 
@@ -400,13 +400,13 @@ show_me_benford('res/suji.jpg')
 
 
     
-![png](image_files/image_44_1.png)
+![png](notebook_files/notebook_44_1.png)
     
 
 
 
     
-![png](image_files/image_44_2.png)
+![png](notebook_files/notebook_44_2.png)
     
 
 
@@ -422,13 +422,13 @@ show_me_benford('res/lenna.jpg')
 
 
     
-![png](image_files/image_46_1.png)
+![png](notebook_files/notebook_46_1.png)
     
 
 
 
     
-![png](image_files/image_46_2.png)
+![png](notebook_files/notebook_46_2.png)
     
 
 
@@ -444,13 +444,13 @@ show_me_benford('res/grandcanyon.jpg')
 
 
     
-![png](image_files/image_48_1.png)
+![png](notebook_files/notebook_48_1.png)
     
 
 
 
     
-![png](image_files/image_48_2.png)
+![png](notebook_files/notebook_48_2.png)
     
 
 
@@ -466,13 +466,13 @@ show_me_benford('res/netflix_connected_benford.png')
 
 
     
-![png](image_files/image_50_1.png)
+![png](notebook_files/notebook_50_1.png)
     
 
 
 
     
-![png](image_files/image_50_2.png)
+![png](notebook_files/notebook_50_2.png)
     
 
 
@@ -488,13 +488,13 @@ show_me_benford('res/ninja.jpg')
 
 
     
-![png](image_files/image_52_1.png)
+![png](notebook_files/notebook_52_1.png)
     
 
 
 
     
-![png](image_files/image_52_2.png)
+![png](notebook_files/notebook_52_2.png)
     
 
 
@@ -550,7 +550,7 @@ showimg(suji_qual_50)
 
 
     
-![png](image_files/image_57_0.png)
+![png](notebook_files/notebook_57_0.png)
     
 
 
@@ -564,7 +564,7 @@ show_me_bendford2(
 
 
     
-![png](image_files/image_58_0.png)
+![png](notebook_files/notebook_58_0.png)
     
 
 
@@ -582,7 +582,7 @@ show_me_bendford2(
 
 
     
-![png](image_files/image_60_0.png)
+![png](notebook_files/notebook_60_0.png)
     
 
 
@@ -603,8 +603,3 @@ show_me_bendford2(
 [JPEG DCT Demo](https://inst.eecs.berkeley.edu/~ee123/sp16/Sections/JPEG_DCT_Demo.html)
 
 [Analysis of Benford's Law in Digital Image Forensics](https://abhayk1201.github.io/files/EE604_tp.pdf)
-
-
-```python
-
-```
