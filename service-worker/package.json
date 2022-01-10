@@ -1,0 +1,14 @@
+{
+  "scripts": {
+    "build": "marp --pdf --allow-local-files slide-deck.md"
+  },
+  "devDependencies": {
+    "@marp-team/marp-cli": "^1.5.0"
+  },
+  "prettier": {
+    "trailingComma": "es5",
+    "tabWidth": 2,
+    "semi": false,
+    "singleQuote": true
+  }
+}
