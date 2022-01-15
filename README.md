@@ -1,9 +1,16 @@
-# run jupyter 
-```bash
-$ jupyter lab
-```
+# My Labs
+This repository has what I've learnt while studying or doing some little experiments.
 
-# install python packages
-```
-$ pip install -f https://download.pytorch.org/whl/torch_stable.html -r requirements.txt
-```
+# Table of Contents
+
+### Experiment Notebooks
+- [**Benford's Law for Image Forgery Detection**](./benford-law/notebook.ipynb)
+- [**Removing Background using _`rembg` (U2-Net based tool)_**](./rembg-test/notebook.ipynb)
+
+
+### Topics of Study
+
+- **[Scala WTF hurdles](./wtf-scala/scala_wtf_hurdles.md)**
+- **[Scala AKKA Basic](./wtf-scala/akka_introduction.md)** / **[Pipe-Filter-Router](./wtf-scala/akka_pipe_filter_router.md)**
+- [**Browser Service Worker**](./service-worker/slide-deck.md)
+
