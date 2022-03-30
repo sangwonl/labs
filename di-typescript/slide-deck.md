@@ -180,7 +180,7 @@ So, **DI is a technique or practice of DIP**
 ---
 ### Other definition of **DI**
 
-One of the best definition is by [James Shore](https://www.jamesshore.com/v2/blog/2006/dependency-injection-demystified):
+One of the best definition by [James Shore](https://www.jamesshore.com/v2/blog/2006/dependency-injection-demystified):
 
 > _"Dependency Injection" is a 25-dollar term for a 5-cent concept. Dependency injection means giving an object its instance variables._
 
@@ -190,6 +190,47 @@ class TeslaModel3 {
 
   setBatteryCapacity(cap: number): void { ... }
 }
+```
+
+---
+### DI(IoC) Container
+
+![w:900](./resources/di-desc-04.png)
+
+---
+### Easier Testing (Mock)
+
+```ts
+describe('AppRunner', () => {
+  class MockRepository implements Repository { ... }
+  class MockProvisioner implements Provisioner { ... }
+
+  it('runs app with mock', () => {
+    const runner = new AppRunner(
+      new MockRepository(),
+      new MockProvisioner()
+    )
+    runner.run('test/app');
+  });
+});
+```
+
+---
+### Easier Testing (Mock)
+
+With mock helper such like [ts-mockito](https://github.com/NagRock/ts-mockito)
+```ts
+const mockedRepository: Repository = mock<Repository>();
+const mockRepo:Foo = instance(mockedRepository);
+
+const mockedProvisioner: Provisioner = mock<Provisioner>();
+const mockProv:Foo = instance(mockedProvisioner);
+
+const runner = new AppRunner(mockRepo, mockProv);
+runner.run('test/app');
+
+verify(mockedRepo.pull('test/app', 'HEAD')).called();
+verify(mockedProv.provision(anything(), anything())).called();
 ```
 
 ---
