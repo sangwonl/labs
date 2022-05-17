@@ -1,0 +1,15 @@
+{
+  "scripts": {
+    "build": "marp --engine ./engine.js --pdf --allow-local-files slide-deck.md"
+  },
+  "devDependencies": {
+    "@marp-team/marp-cli": "^1.5.0",
+    "markdown-it-plantuml": "^1.4.1"
+  },
+  "prettier": {
+    "trailingComma": "es5",
+    "tabWidth": 2,
+    "semi": false,
+    "singleQuote": true
+  }
+}
