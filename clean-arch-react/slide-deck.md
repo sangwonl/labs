@@ -322,4 +322,5 @@ const useObservableState = (selector) => {
 ---
 
 ### 참고
+- https://dev.to/bespoyasov/clean-architecture-on-frontend-4311
 - https://khalilstemmler.com/articles/software-design-architecture/domain-driven-design-vs-clean-architecture
