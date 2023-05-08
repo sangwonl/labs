@@ -1,16 +1,22 @@
 ---
 marp: true
 theme: gaia
-class: invert
+# class: invert
 
 ---
 ## ChatGPT
 
 ##### 대신 조사해드립니다.
 
-`Sangwon Lee`
-
-_20230419_
+`gamz`
+\
+\
+\
+\
+\
+\
+_20230508 - Real-world Tools Added_
+_20230419 - First Created_
 
 ---
 #### 목차
@@ -19,7 +25,7 @@ _20230419_
 - GPT vs GPT-#  vs ChatGPT
 - ChatGPT 잘 쓰는 방법? (Prompt)
 - OpenAI API 사용 튜토리얼
-- 버블일까?
+- Real-world Tools
 
 ---
 ### GPT 정의
@@ -95,15 +101,30 @@ NLP 기반 AI 분야에서 프롬프트의 요소들을 잘 활용해서 결과�
 > I want you to act as an English translator, spelling corrector, and improver. I will speak to you in any language and you will detect the language, translate it and answer in the corrected and improved version of my text, in English. I want you to replace my simplified A0-level words and sentences with more beautiful and elegant, upper-level English words and sentences. Keep the meaning the same, but make them more literary. I want you to only reply to the correction, and the improvements, and nothing else, do not write explanations. My first sentence is {sentence}
 
 ---
+![w:850](./resources/chatgpt-example-trans-plain.png)
+
+---
 ### ChatGPT 잘 쓰는 방법? (Prompt)
 예시) 나만의 영어 번역기 (JSON 응답)
 > I want you to act as an English translator, spelling corrector, and improver. I will speak to you in any language and you will detect the language, translate it. I want you to replace my simplified A0-level words and sentences with more beautiful and elegant, upper-level English words and sentences. Keep the meaning the same, but make them more literary. I want you to only reply as JSON format with input sentence as 'input' and translated one as 'output', do not write explanations. My first sentence is {sentence}
+
+---
+![w:850](./resources/chatgpt-example-trans-json.png)
 
 ---
 ### ChatGPT 잘 쓰는 방법? (Prompt)
 
 예시) Linux Kernel 빙의
 > I want you to act as a Linux terminal. I will type commands and you will reply with what the terminal should show. I want you to only reply with the terminal output inside one unique code block, and nothing else. do not write explanations. do not type commands unless I instruct you to do so. when I need to tell you something in English, I will do so by putting text inside curly brackets {like this}.
+
+---
+![w:850](./resources/chatgpt-example-linux.png)
+
+---
+![w:850](./resources/chatgpt-example-linux-ls.png)
+
+---
+![w:850](./resources/chatgpt-example-linux-rmrf.png)
 
 ---
 ### ChatGPT 잘 쓰는 방법? (Prompt)
@@ -369,8 +390,72 @@ const response = await chatGpt.sendMessage(content, {
 ```
 
 ---
-### 버블일까?
+### Real-world Tools
+- https://github.com/microsoft/JARVIS (Based on [HuggingGPT](http://arxiv.org/abs/2303.17580))
 
+***Task Planning***: Using ChatGPT to analyze the requests of users to understand their intention.
+***Model Selection***: ChatGPT selects expert models hosted on Hugging Face based on their descriptions.
+***Task Execution***: Invokes and executes each selected model, and return the results to ChatGPT.
+***Response Generation***: Finally, using ChatGPT to integrate the prediction of all models, and generate responses.
+
+---
+### Real-world Tools
+- https://github.com/Significant-Gravitas/Auto-GPT
+
+🌐 Internet access for searches and information gathering
+💾 Long-term and short-term memory management
+🧠 GPT-4 instances for text generation
+🔗 Access to popular websites and platforms
+🗃️ File storage and summarization with GPT-3.5
+🔌 Extensibility with Plugins
+
+---
+### Real-world Tools
+- https://github.com/hwchase17/langchain
+
+![w:700](./resources/langchain-usecase.png)
+
+---
+### Real-world Tools
+
+```python
+from langchain.prompts import PromptTemplate
+from langchain.llms import OpenAI
+from langchain.chains import LLMChain, SimpleSequentialChain
+
+llm = OpenAI(temperature=0.9)
+
+chain1 = LLMChain(llm=llm, prompt=PromptTemplate(
+  input_variables=["product"],
+  template="What is a good name for a company that makes {product}?"))
+
+chain2 = LLMChain(llm=llm, prompt=PromptTemplate(
+  input_variables=["company_name"],
+  template="Write a catchphrase for the following company: {company_name}"))
+
+overall_chain = SimpleSequentialChain(chains=[chain1, chain2])
+```
+
+---
+### Real-world Tools
+
+```python
+catchphrase = overall_chain.run("colorful socks")
+
+print(catchphrase)
+```
+
+```bash
+Rainbow Socks Co.
+
+"Step into Color with Rainbow Socks!"
+```
+
+---
+### Real-world Tools
+- https://github.com/jerryjliu/llama_index
+
+![w:700](./resources/llamaindex-hub.png)
 
 ---
 ### References
@@ -381,3 +466,13 @@ const response = await chatGpt.sendMessage(content, {
 - [OpenAI Cookbook - Improve Reliability](https://github.com/openai/openai-cookbook/blob/main/techniques_to_improve_reliability.md)
 - [OpenAI Playground](https://platform.openai.com/playground?mode=chat)
 - [NPM Package `chatgpt`](https://github.com/transitive-bullshit/chatgpt-api#readme)
+
+---
+### References
+- [Auto-GPT](https://github.com/Significant-Gravitas/Auto-GPT)
+- [Microsoft Jarvis](https://github.com/microsoft/JARVIS)
+- [Hugging Face](https://huggingface.co/welcome)
+- [Langchain](https://github.com/hwchase17/langchain)
+- [LLama-index](https://github.com/jerryjliu/llama_index)
+- [LLama-index Hub](https://llamahub.ai/)
+- [카카오톡 연동 AI 챗봇, ChatGee](https://github.com/woensug-choi/ChatGee)
