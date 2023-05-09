@@ -402,12 +402,7 @@ const response = await chatGpt.sendMessage(content, {
 ### Real-world Tools
 - https://github.com/Significant-Gravitas/Auto-GPT
 
-🌐 Internet access for searches and information gathering
-💾 Long-term and short-term memory management
-🧠 GPT-4 instances for text generation
-🔗 Access to popular websites and platforms
-🗃️ File storage and summarization with GPT-3.5
-🔌 Extensibility with Plugins
+![w:750](./resources/auto-gpt-demo.gif)
 
 ---
 ### Real-world Tools
@@ -441,11 +436,9 @@ overall_chain = SimpleSequentialChain(chains=[chain1, chain2])
 
 ```python
 catchphrase = overall_chain.run("colorful socks")
-
 print(catchphrase)
-```
 
-```bash
+---
 Rainbow Socks Co.
 
 "Step into Color with Rainbow Socks!"
@@ -455,7 +448,24 @@ Rainbow Socks Co.
 ### Real-world Tools
 - https://github.com/jerryjliu/llama_index
 
-![w:700](./resources/llamaindex-hub.png)
+```python
+from llama_index import GPTVectorStoreIndex, SimpleDirectoryReader
+
+# data/paul_graham_essay.txt
+documents = SimpleDirectoryReader('data').load_data()
+index = GPTVectorStoreIndex.from_documents(documents)
+
+query_engine = index.as_query_engine()
+response = query_engine.query("What did the author do growing up?")
+print(response)
+
+---
+The author wrote short stories and tried to program on an IBM 1401.
+```
+
+---
+
+![w:950](./resources/llamaindex-hub.png)
 
 ---
 ### References
