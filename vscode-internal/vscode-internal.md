@@ -1805,7 +1805,9 @@ Preferred location(runtime): `extensionKind`
 
 Disposable - 컴포넌트 및 리소스들의 상태 정리를 위한 메커니즘
 
-Proxy Pattern (Mock, RPC, AOP, Injection)
+Cancellation Tokens - 수행 중인 잡을 취소하기 위한 메커니즘 (가령, 타이핑마다...)
+
+[Proxy Pattern](https://en.wikipedia.org/wiki/Proxy_pattern) - Mock, RPC/IPC, AOP, Injection
 
 Clean Architecture vs Practical Architecture
 
@@ -1814,3 +1816,4 @@ Clean Architecture vs Practical Architecture
 - [VS Code Wiki](https://github.com/microsoft/vscode-wiki)
 - [VS Code Extension Guide](https://code.visualstudio.com/api)
 - [VS Code Extension Samples](https://github.com/microsoft/vscode-extension-samples)
+- [VS Code Extension Patterns](https://vscode-docs.readthedocs.io/en/stable/extensions/patterns-and-principles/)
