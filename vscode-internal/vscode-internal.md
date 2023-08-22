@@ -1809,7 +1809,7 @@ Cancellation Tokens - 수행 중인 잡을 취소하기 위한 메커니즘 (가
 
 [Proxy Pattern](https://en.wikipedia.org/wiki/Proxy_pattern) - Mock, RPC/IPC, AOP, Injection
 
-Clean Architecture vs Practical Architecture
+Dependency Rule - base ⬅ platform ⬅ editor ⬅ workbench ⬅ code / web
 
 ---
 ### 참고
