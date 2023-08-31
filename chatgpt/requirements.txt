@@ -1,0 +1,5 @@
+jupyterlab
+xeus-python
+matplotlib
+openai==0.27.2
+python-dotenv
