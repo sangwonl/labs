@@ -8,3 +8,6 @@ diffusers
 torch
 transformers
 accelerate
+onnxruntime
+insightface
+rembg
