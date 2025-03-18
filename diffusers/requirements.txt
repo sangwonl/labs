@@ -11,3 +11,5 @@ accelerate
 onnxruntime
 insightface
 rembg
+huggingface_hub
+peft
