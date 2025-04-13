@@ -1,0 +1,7 @@
+jupyterlab
+xeus-python
+--extra-index-url https://download.pytorch.org/whl/cu121
+torch
+stable-baselines3[extra]
+numpy
+pygame
